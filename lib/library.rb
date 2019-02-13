@@ -18,4 +18,22 @@ class Library
   def card_catalog
     @books.sort_by{|book| book.author_last_name}
   end
+
+  def find_by_author(author)
+    by_author = @books.find_all do |book|
+      author == [book.author_first_name,book.author_last_name].join(" ")
+    end
+
+    make_title_hash(by_author)
+
+  end
+
+  def make_title_hash(book_array)
+    title_hash = {}
+    book_array.each do |book|
+      title_hash[book.title] = book
+    end
+
+    return title_hash
+  end
 end
