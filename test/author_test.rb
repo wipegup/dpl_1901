@@ -30,4 +30,5 @@ class AuthorTest < Minitest::Test
                       publication_date: "2010"})
 
     assert_equal [book_1, book_2], @author.books
+  end
 end
