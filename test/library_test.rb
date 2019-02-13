@@ -1,4 +1,7 @@
 require './test/test_helper'
+require './lib/library'
+require './lib/author'
+require './lib/book'
 
 class LibraryTest < Minitest::Test
   def setup
