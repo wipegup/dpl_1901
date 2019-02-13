@@ -1,23 +1,16 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/aleneschlereth/turing/1710/exercises/denver_public_library/test/book_test.rb": [
+      "/Users/wipegup/Documents/Turing/independent_challenges/dpl_1901/lib/book.rb": [
+        1,
         1,
         null,
-        1,
         null,
-        null,
-        null
-      ],
-      "/Users/aleneschlereth/turing/1710/exercises/denver_public_library/test/library_test.rb": [
-        1,
-        null,
-        1,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1508521288
+    "timestamp": 1550074074
   }
 }
