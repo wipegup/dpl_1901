@@ -21,4 +21,5 @@ class LibraryTest < Minitest::Test
 
   def test_books_starts_empty
     assert_equal [], @library.books
+  end
 end
