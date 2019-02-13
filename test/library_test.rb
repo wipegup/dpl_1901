@@ -32,4 +32,5 @@ class LibraryTest < Minitest::Test
     @library.add_to_collection(@mockingbird)
 
     assert_equal [@fifth_season, @kingdoms, @mockingbird], @library.books
+  end
 end
