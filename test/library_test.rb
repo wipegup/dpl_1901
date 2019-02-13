@@ -19,4 +19,6 @@ class LibraryTest < Minitest::Test
     assert_instance_of Library, @library
   end
 
+  def test_books_starts_empty
+    assert_equal [], @library.books
 end
