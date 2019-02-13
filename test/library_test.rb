@@ -56,7 +56,7 @@ class LibraryTest < Minitest::Test
                 "The Hundred Thousand Kingdoms" => @kingdoms}
     assert_equal expected, @library.make_title_hash([@fifth_season, @kingdoms])
   end
-  
+
   def test_find_by_author
     @library.add_to_collection(@fifth_season)
     @library.add_to_collection(@kingdoms)
@@ -68,5 +68,9 @@ class LibraryTest < Minitest::Test
     assert_equal expected, @library.find_by_author("N.K. Jemisin")
   end
 
+  def test_find_by_publication
+    expected ={"To Kill a Mockingbird" => @mockingbird}
 
+    assert_equal expected, @library.find_by_publication("1960")
+  end
 end
