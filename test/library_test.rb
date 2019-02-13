@@ -69,6 +69,10 @@ class LibraryTest < Minitest::Test
   end
 
   def test_find_by_publication
+    @library.add_to_collection(@fifth_season)
+    @library.add_to_collection(@kingdoms)
+    @library.add_to_collection(@mockingbird)
+
     expected ={"To Kill a Mockingbird" => @mockingbird}
 
     assert_equal expected, @library.find_by_publication("1960")

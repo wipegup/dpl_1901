@@ -28,6 +28,12 @@ class Library
 
   end
 
+  def find_by_publication(publication_date)
+    by_publication = @books.find_all{ |book| book.publication_date == publication_date}
+
+    make_title_hash(by_publication)
+  end
+
   def make_title_hash(book_array)
     title_hash = {}
     book_array.each do |book|
@@ -36,4 +42,6 @@ class Library
 
     return title_hash
   end
+
+
 end
