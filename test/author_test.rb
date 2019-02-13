@@ -11,4 +11,7 @@ class AuthorTest < Minitest::Test
     assert_instance_of Author, @author
   end
 
+  def test_it_starts_with_empty_books_array
+    assert_equal [], @author.books
+  end
 end
