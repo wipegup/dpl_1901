@@ -42,4 +42,12 @@ class LibraryTest < Minitest::Test
     assert_equal true, @library.include?("To Kill a Mockingbird")
     assert_equal false, @library.include?("The Bible")
   end
+
+  def test_card_catalog_returns_all_books_ordered_by_author_last_name
+    @library.add_to_collection(@fifth_season)
+    @library.add_to_collection(@kingdoms)
+    @library.add_to_collection(@mockingbird)
+
+    assert_equal [@fifth_season, @kingdoms, @mockingbird], @library.card_catalog
+  end
 end
