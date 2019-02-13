@@ -50,4 +50,15 @@ class LibraryTest < Minitest::Test
 
     assert_equal [@fifth_season, @kingdoms, @mockingbird], @library.card_catalog
   end
+
+  def test_find_by_author
+    @library.add_to_collection(@fifth_season)
+    @library.add_to_collection(@kingdoms)
+    @library.add_to_collection(@mockingbird)
+
+    expected = {"The Fifth Season" => @fifth_season,
+                "The Hundred Thousand Kingdoms" => @kingdoms}
+
+    assert_equal expected, @library.find_by_author("N.K. Jemisin")
+  end
 end
