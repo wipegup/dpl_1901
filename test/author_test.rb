@@ -19,16 +19,11 @@ class AuthorTest < Minitest::Test
     @author.add_book("The Fifth Season", "November 3, 2015")
     @author.add_book("The Hundred Thousand Kingdoms", "2010")
 
-    book_1 = Book.new({author_first_name: "N.K.",
-                      author_last_name: "Jemisin",
-                      title: "The Fifth Season",
-                      publication_date: "November 3, 2015"})
+    assert_equal "N.K.", @author.books[0].author_first_name
+    assert_equal "The Fifth Season", @author.books[0].title
 
-    book_2 = Book.new({author_first_name: "N.K.",
-                      author_last_name: "Jemisin",
-                      title: "The Hundred Thousand Kingdoms",
-                      publication_date: "2010"})
+    assert_equal "Jemisin", @author.books[1].author_last_name
+    assert_equal "2010", @author.books[1].publication_date
 
-    assert_equal [book_1, book_2], @author.books
   end
 end
